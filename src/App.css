@@ -1,0 +1,243 @@
+/* src/App.css - Widescreen Card & Component Layout */
+
+.stage-wrapper {
+  width: 100%;
+  max-width: 1020px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Widescreen 16:9 card aspect ratio */
+.canvas-16-9 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px -12px rgba(22, 163, 74, 0.18);
+  border: 1px solid #dcfce7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Welcome Screen & Result Screen Cards */
+.welcome-card,
+.score-card {
+  text-align: center;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-badge {
+  background: #e8f5e9;
+  color: #15803d;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  color: #14532d;
+  margin: 16px 0 8px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #14532d;
+  font-weight: 700;
+}
+
+p {
+  color: #6b7280;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #16a34a;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(22, 163, 74, 0.25);
+}
+
+.btn-primary:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Question Page Outer Layout */
+.question-page-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Progress Component */
+.progress-wrapper {
+  text-align: center;
+}
+
+.progress-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.progress-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.dot.active {
+  border-color: #16a34a;
+  background: #e8f5e9;
+  color: #16a34a;
+}
+
+.dot.correct {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+.dot.incorrect {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Question Component */
+.question-box {
+  margin: 12px 0;
+}
+
+.question-tag {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.question-text {
+  font-size: 1.35rem;
+  color: #111827;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* Option Component Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.option-card {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-card:hover {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.option-card.selected {
+  border-color: #16a34a;
+  background: #e8f5e9;
+}
+
+.option-card input {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #94a3b8;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.option-card.selected .radio-custom {
+  border-color: #16a34a;
+  background: #16a34a;
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+.option-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Action Button Row */
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Result / Score Screen */
+.trophy-icon {
+  font-size: 3.5rem;
+  margin-bottom: 8px;
+}
+
+.score-display {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #16a34a;
+  margin: 10px 0;
+}
